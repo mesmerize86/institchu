@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import styled from 'styled-components';
+import { breakpoints } from "./styles/breakpoints/breakpoints";
 
-function App() {
+/* ui components */
+import Card from './ui-components/card/card';
+
+/* styles*/
+import { flexbox, flexWraps } from "./styles/mixins/flexbox";
+
+const MainWrapper = styled.div`
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  ${ flexbox };
+  ${ flexWraps('wrap') };
+  
+  @media ${breakpoints.largeUp} {
+    padding: 40px;
+  }
+`;
+
+const App = ()=> {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <MainWrapper>
+      <Card />
+    </MainWrapper>
+);
 }
 
 export default App;
