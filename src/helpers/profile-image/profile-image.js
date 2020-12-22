@@ -1,4 +1,4 @@
-import { FallBackProfileImage, Initials, ProfileImageStyle } from "./style";
+import { FallBackProfileImage, Initials, ProfileImageStyle } from "./profile-image-style";
 
 /**
  * if profile image not found, display initials as the profile pictures

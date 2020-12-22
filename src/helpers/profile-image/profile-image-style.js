@@ -1,15 +1,14 @@
 import styled from 'styled-components';
-import { flexbox, justifyContent, alignItems } from "../../styles/mixins/flexbox";
 
 export const FallBackProfileImage = styled.div`
   background: ${ props => props.theme.colors.body };
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  margin: 0 auto;
-  ${flexbox};
-  ${justifyContent('center')};
-  ${alignItems('center')};
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Initials = styled.p`
@@ -19,5 +18,6 @@ export const Initials = styled.p`
 
 export const ProfileImageStyle = styled.img`
   max-width: 250px;
+  margin-bottom: 20px;
 `;
 

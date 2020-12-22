@@ -4,21 +4,21 @@ import update from 'immutability-helper';
 let initialState = {
   isLoading: false,
   users: [{
-    id: 1,
+    id: '1',
     name: 'Kishor Maharjan',
     username: 'Kishoma',
     email: 'kishor.maharjan@gmail.com',
     phone: '041234567',
     profileImageUrl: ''
   }, {
-    id: 2,
+    id: '2',
     name: 'Preety Maharjan',
     username: 'Preet',
     email: 'preet@gmail.com',
     phone: '0412342234',
     profileImageUrl: 'preety.jpg'
   }, {
-    id: 3,
+    id: '3',
     name: 'Nirvana Maharjan',
     username: 'nirvana',
     email: 'nirvana@gmail.com',
@@ -48,7 +48,7 @@ export default (state= initialState, action = {}) => {
 
 /* update users in a redux store */
 const updateUser = (state, modifyUser)=> {
-  let index = state.users.findIndex((user)=> user.id === parseInt(modifyUser.id));
+  let index = state.users.findIndex((user)=> user.id === modifyUser.id);
   let updatedUser = update (state.users, {$splice: [[index, 1, modifyUser]] });
   return updatedUser;
 }

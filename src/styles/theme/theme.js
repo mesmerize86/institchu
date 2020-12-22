@@ -6,7 +6,8 @@ export default {
     body: '#EBEBEB',
     white: '#FFFFFF',
     black: '#212121',
-    highlight_light: '#6d4078'
+    highlight_light: '#6d4078',
+    light_grey: '#383636'
   },
   fonts: {
     sizexx: '1.375rem',

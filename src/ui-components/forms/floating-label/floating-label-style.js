@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { transform } from "../../../styles/mixins/transform";
 
 export const FloatingLabelStyle = styled.div`
    margin-bottom: 15px;
@@ -11,7 +10,7 @@ export const FloatingLabelStyle = styled.div`
         input[type="tel"] {
             padding: 8px 14px;
             border: 1px solid ${props => props.theme.colors.black};
-            min-height: 22px;
+            min-height: 50px;
             font-size: ${props => props.theme.fonts.bodySize};
             font-family: 'Montserrat';
 
@@ -23,7 +22,7 @@ export const FloatingLabelStyle = styled.div`
                 pointer-events: none;
                 position: relative;
                 text-align: left;
-                top: -31px;
+                top: -38px;
                 left: 15px;
                 width: 100%;
 
@@ -42,18 +41,20 @@ export const FloatingLabelStyle = styled.div`
                     color:  ${props => props.theme.colors.highlight};
                     font-size: ${props => props.theme.fonts.bodySize};
                     background: ${props => props.theme.colors.white};
-                    ${transform('translateY(-19px)')};
+                    transform: translateY(-26px);
 
                 }
             }
 
             /* when input has some text */
             &.input-has-content {
+              border-color: ${props => props.theme.colors.highlight};
+              
                 + label .floating-label-text {
                     color: ${props => props.theme.colors.highlight};
                     font-size:${props => props.theme.fonts.bodySize};
                     background:  ${props => props.theme.colors.white};
-                    ${transform('translateY(-19px)')};
+                    transform: translateY(-26px);
                 }
             }
 
