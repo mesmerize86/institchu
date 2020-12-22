@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import {flexbox, justifyContent, alignItems} from "../../styles/mixins/flexbox";
 
 const LoadingStyle = styled.div`
-  ${flexbox};
-  ${justifyContent('center')};
-  ${alignItems('center')};
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
   z-index: 5;
   position: absolute;
   top: 0;

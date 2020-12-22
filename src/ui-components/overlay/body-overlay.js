@@ -4,15 +4,10 @@ import classnames from 'classnames';
 import { BodyOverlayStyle } from './BodyOverlayStyle';
 
 const BodyOverlayComponent = ({ isModalOpen, onClose}) => {
-  const handleCloseModalOnOverlay = ()=> {
-    if (onClose) {
-      onClose();
-    }
-  }
   return (
     <BodyOverlayStyle
       className={classnames({ 'modal-is-open': isModalOpen })}
-      onClick={ handleCloseModalOnOverlay }>
+      onClick={ onClose }>
     </BodyOverlayStyle>
   );
 };

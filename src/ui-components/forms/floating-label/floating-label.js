@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
 import { FloatingLabelStyle } from "./floating-label-style";
 
-const FloatingLabel = ({ htmlFor, register, name, field}) => {
-  const [inputHasContent, setInputHasContent] = useState();
+const FloatingLabel = ({ htmlFor, register, name, field, value }) => {
+  const [inputHasContent, setInputHasContent] = useState(false);
+
+  useEffect(()=> {
+    debugger;
+    if (value) {
+      setInputHasContent(true);
+    }
+  }, [value]);
 
   /**
    * handle on change
@@ -21,6 +28,7 @@ const FloatingLabel = ({ htmlFor, register, name, field}) => {
         name = { name }
         onChange={ handleChange }
         className={classnames({'input-has-content': inputHasContent})}
+        defaultValue = {value}
         ref = { register}
         />
       <label htmlFor={ htmlFor }>
