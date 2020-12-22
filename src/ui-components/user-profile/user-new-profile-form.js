@@ -32,7 +32,7 @@ const UserNewProfileForm = ({handleFormSubmit, handleCancelForm, isNewUserEnable
 
   return (
     <Card className={classnames('new-user-form', {'float-card' : isNewUserEnable})}>
-      {isLoading && <Loader message={'adding...'}/>}
+      {isLoading && <Loader />}
       <H1>Add a new profile</H1>
       <form onSubmit={ handleSubmit(onSubmit) } >
         <UserDescriptionWrapperStyle>
