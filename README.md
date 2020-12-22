@@ -1,3 +1,7 @@
+Hi Adrian
+
+I'm taking a bit advantage of having extra time. I have spent some time to improvised components. Hope you'll be okay with this. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
