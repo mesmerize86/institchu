@@ -6,7 +6,6 @@ const FloatingLabel = ({ htmlFor, register, name, field, value }) => {
   const [inputHasContent, setInputHasContent] = useState(false);
 
   useEffect(()=> {
-    debugger;
     if (value) {
       setInputHasContent(true);
     }

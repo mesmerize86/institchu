@@ -32,7 +32,7 @@ export const updateUser = (user) => {
     try {
       setTimeout(()=> {
         dispatch({ type: UPDATE_USER_PROFILE_SUCCESS, user: user, isLoading: false})
-      }, 200);
+      }, 500);
     } catch (error) {
       console.log(error);
     }
