@@ -27,7 +27,7 @@ let initialState = {
   }
   ]
 }
-export default (state= initialState, action = {}) => {
+const userReducer = (state= initialState, action = {}) => {
   switch(action.type) {
     case GET_USER_SUCCESS :
       return {...state, users: action.payload }
@@ -49,6 +49,7 @@ export default (state= initialState, action = {}) => {
 /* update users in a redux store */
 const updateUser = (state, modifyUser)=> {
   let index = state.users.findIndex((user)=> user.id === modifyUser.id);
-  let updatedUser = update (state.users, {$splice: [[index, 1, modifyUser]] });
-  return updatedUser;
+  return update (state.users, {$splice: [[index, 1, modifyUser]] });
 }
+
+export default userReducer;

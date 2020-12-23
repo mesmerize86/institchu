@@ -1,4 +1,4 @@
-export default {
+const institchuTheme = {
   colors: {
     primary: '#DC232E',
     secondary: '#262A2D',
@@ -15,3 +15,5 @@ export default {
     bodySize: '1rem'
   }
 }
+
+export default institchuTheme;
