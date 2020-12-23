@@ -22,7 +22,7 @@ const UserNewProfileForm = ({handleFormSubmit, handleCancelForm, isNewUserEnable
   useEffect(()=> {
     setLoading(loading);
     reset();
-  }, [loading]);
+  }, [loading, reset]);
 
   /* submit new user form */
   const onSubmit = (data, e)=> {
